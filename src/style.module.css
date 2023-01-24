@@ -2,59 +2,60 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 700;
 }
+
 /* The following CSS is all for the navebar/header and its contents */
 
 nav {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-left: 8rem;
-    margin-right: 10.5rem;
-    border-bottom: 3px solid #e9e9e9;
-    padding-bottom: 2.5rem;
-    
-  }
-  
-  .logo {
-    margin-right: 2rem;
-  }
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 8rem;
+  margin-right: 8.5rem;
+  border-bottom: 3px solid #e9e9e9;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
 
-  ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  li {
-    margin-left: 1.8rem;
-    
-  }
+}
 
-  nav a {
+.logo {
+  margin-right: 2rem;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-    color: rgb(141, 141, 141);
-    text-decoration: none;
-    padding-bottom: 51px;
-    transition: all 0.2s ease-in-out;
-  }
+li {
+  margin-left: 1.8rem;
 
-  nav ul li a:hover {
-  color: rgb(0, 0, 0);
-  border-bottom: 4px solid hsl(26, 100%, 55%)
+}
+
+nav a {
+
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+  padding-bottom: 45px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+color: rgb(0, 0, 0);
+border-bottom: 4px solid hsl(26, 100%, 55%)
 }
 
 
-  .icons {
-    float: right;
-    margin-left: 30rem;
-    text-align: center; 
-    
-  }
-  
-  .icons img {
-    margin-left: 40px;
-  }
+.icons {
+  float: right;
+  margin-left: 30rem;
+  text-align: center; 
+
+}
+
+.icons img {
+  margin-left: 40px;
+}
 
   .avatar {
       width: 45px;
@@ -67,3 +68,42 @@ nav {
     box-shadow: 0 0 0 2px hsl(26, 100%, 55%);
   }
   
+  /* The following CSS is for the images in the ProductImage folder (main image and thumbnail) */
+
+  .productImage {
+    display: grid;
+    justify-content: flex-start;
+    margin-left: 11rem;
+  }
+  
+  .mainImage {
+    display: flex;
+    justify-content: flex-start;
+    width: 400px;
+    height: 390px;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
+  }
+  
+  .thumbnailContainer {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    margin-left: 0.8rem;
+  }
+  
+  .thumbnail {
+    width: 84px;
+    height: fit-content;
+    margin: 10px;
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease-in;
+  }
+
+  .selected {
+      box-shadow: 0 0 0 3px hsl(26, 100%, 55% );
+      opacity: 0.4;
+  }
+  
+ 
