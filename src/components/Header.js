@@ -20,7 +20,7 @@ const Header = () => {
 
   <div className={styles.icons}>
     <a href="#">
-        <img src={cart_icon} alt="Shopping Cart"/>
+        <img className={styles.icon1} src={cart_icon} alt="Shopping Cart"/>
     </a>
     <a href="#">
         <img src={avatar} className={styles.avatar} alt="Avatar"/>
