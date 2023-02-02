@@ -8,7 +8,7 @@ import ProductInfo from './ProductInfo'
 
 const shoes = [shoes1, shoes2, shoes3, shoes4,]
 
-function ProductImage() {
+function ProductImage({count, setCount, itemTotal, setItemTotal}) {
   const [currentImage, setCurrentImage] = useState(shoes[0]);
 
   return (
@@ -17,7 +17,7 @@ function ProductImage() {
       <img src={currentImage} alt="Product" className={styles.mainImage}/>
         <div className={styles.thumbnailContainer}>
             {shoes.map((image, index) => (
-            <img
+          <img
             key={index}
             src={image}
             alt="Thumbnail"
@@ -26,7 +26,12 @@ function ProductImage() {
              ))}
         </div>
     </div>
-      <div className={styles.productInfo}><ProductInfo></ProductInfo></div>
+      <div className={styles.productInfo}><ProductInfo 
+                                            count={count}
+                                            setCount={setCount}
+                                            itemTotal={itemTotal}
+                                            setItemTotal={setItemTotal}/>
+      </div>
   </div>
   );
 }

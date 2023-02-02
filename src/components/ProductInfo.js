@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import styles from "../style.module.css";
 import minus from "../images/icon-minus.svg"
 import plus from "../images/icon-plus.svg"
 import cart_icon from "../images/icon-cart.svg"
 
-function ProductInfo() {
+function ProductInfo({count, setCount, itemTotal, setItemTotal}) {
 
-    const [count, setCount] = useState(0);
 
     const increment = () => {
       setCount(count + 1);
@@ -17,6 +15,14 @@ function ProductInfo() {
         setCount(count - 1);
       }
     };
+
+    const handleAddToCart = () => {
+      setItemTotal(itemTotal + count);
+      setCount(0);
+  };
+
+  
+
     return (<>
 
     <p className={styles.company}>SNEAKER COMPANY</p>
@@ -38,7 +44,7 @@ function ProductInfo() {
                 <span>{count}</span>
             <img className={styles.plus} src={plus} alt="Plus" onClick={increment} />
         </span>
-        <button className={styles.addToCartButton}><img src={cart_icon}/>Add to basket</button>
+        <button className={styles.addToCartButton} onClick={handleAddToCart}><img src={cart_icon} alt="cart icon"/>Add to basket</button>
     </div>
 
     </>)
