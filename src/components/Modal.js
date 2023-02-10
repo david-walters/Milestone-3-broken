@@ -7,7 +7,7 @@ import PreviousIcon from "./PreviousIcon";
 
 function Modal ({shoes, setShowModal, currentImage, setCurrentImage}) {
 
-    const handleCloseModal = () => {
+      const handleCloseModal = () => {
         setShowModal(false);
       };
     

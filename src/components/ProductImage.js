@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import styles from "../style.module.css";
-import shoes1 from '../images/image-product-1.jpg'
-import shoes2 from '../images/image-product-2.jpg'
-import shoes3 from '../images/image-product-3.jpg'
-import shoes4 from '../images/image-product-4.jpg'
 import ProductInfo from './ProductInfo'
 import Modal from './Modal'
 import shortid from 'shortid'
 
-const shoes = [shoes1, shoes2, shoes3, shoes4,]
 
-function ProductImage({count, setCount, itemTotal, setItemTotal}) {
+
+function ProductImage({shoes, count, setCount, itemTotal, setItemTotal, currentImage, setCurrentImage}) {
   
-  const [currentImage, setCurrentImage] = useState(shoes[0]);
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = (img) => {
