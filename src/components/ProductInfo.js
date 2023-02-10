@@ -44,7 +44,7 @@ function ProductInfo({count, setCount, itemTotal, setItemTotal}) {
                 <span>{count}</span>
             <img className={styles.plus} src={plus} alt="Plus" onClick={increment} />
         </span>
-        <button className={styles.addToCartButton} onClick={handleAddToCart}><img src={cart_icon} alt="cart icon"/>Add to basket</button>
+        <button className={styles.addToCartButton} onClick={handleAddToCart}><img src={cart_icon} alt="cart icon"/>Add to cart</button>
     </div>
 
     </>)
