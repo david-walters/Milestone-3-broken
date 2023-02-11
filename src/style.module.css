@@ -60,11 +60,12 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
 
 .cartIcon {
   position: relative;
+  display: inline;
 }
 
 .itemCount {
   position: absolute;
-  bottom: 94%;
+  bottom: 85%;
   left: 40%;
   font-size: 0.7rem;
   width: 20px;

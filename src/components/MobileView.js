@@ -59,10 +59,10 @@ const MobileView = ({count, setCount, itemTotal, setItemTotal, currentImage, set
                     
 
                         <div className={styles.icons}>
-                                <a className={styles.cartIcon} href="#">
+                                <div className={styles.cartIcon}>
                                   <img className={styles.icon1} src={cart_icon} alt="Shopping Cart"/>
                                   {itemTotal > 0 && <span className={styles.itemCount}>{itemTotal}</span>}
-                                </a>
+                                </div>
                             <div className={styles.cartContainer}>
                                   <div className={styles.cartTitle}>Cart
                                   </div>
