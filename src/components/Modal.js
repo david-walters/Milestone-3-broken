@@ -24,7 +24,7 @@ function Modal ({shoes, setShowModal, currentImage, setCurrentImage}) {
     return ReactDOM.createPortal(
 
     <>
-        <div className={styles.overlay}></div>
+        <div className={styles.overlay} onClick={handleCloseModal}></div>
         <div className={styles.modal}>
           
           <div className={styles.close} onClick={handleCloseModal}><CloseIcon/></div>
