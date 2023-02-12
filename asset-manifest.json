@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Milestone-3/static/css/main.3fb959fa.css",
-    "main.js": "/Milestone-3/static/js/main.b517308b.js",
+    "main.css": "/Milestone-3/static/css/main.d201900b.css",
+    "main.js": "/Milestone-3/static/js/main.3ab1ff09.js",
     "static/media/image-product-2.jpg": "/Milestone-3/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
     "static/media/image-product-1.jpg": "/Milestone-3/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
     "static/media/image-product-3.jpg": "/Milestone-3/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
@@ -12,11 +12,11 @@
     "static/media/icon-cart.svg": "/Milestone-3/static/media/icon-cart.539ec608f50e707c94d583ec11acf99d.svg",
     "static/media/icon-plus.svg": "/Milestone-3/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
     "static/media/icon-minus.svg": "/Milestone-3/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
-    "main.3fb959fa.css.map": "/Milestone-3/static/css/main.3fb959fa.css.map",
-    "main.b517308b.js.map": "/Milestone-3/static/js/main.b517308b.js.map"
+    "main.d201900b.css.map": "/Milestone-3/static/css/main.d201900b.css.map",
+    "main.3ab1ff09.js.map": "/Milestone-3/static/js/main.3ab1ff09.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fb959fa.css",
-    "static/js/main.b517308b.js"
+    "static/css/main.d201900b.css",
+    "static/js/main.3ab1ff09.js"
   ]
 }
