@@ -112,7 +112,7 @@ const MobileView = ({count, setCount, itemTotal, setItemTotal, currentImage, set
                    
                         {showNav && (
                         <>
-                        <div className={styles.blackOut}></div>
+                        <div className={styles.blackOut} onClick={handleCloseNav}></div>
 
                         <div className={styles.navMB}>
                             <div onClick={handleCloseNav}><CloseIcon/></div>
