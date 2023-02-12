@@ -95,14 +95,11 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
   /* The following CSS is for the images in the ProductImage folder (main image and thumbnail) */
 
   .productImage {
-    display: grid;
-    justify-content: flex-start;
     margin-left: 11rem;
   }
   
   .mainImage {
     display: flex;
-    justify-content: flex-start;
     width: 430px;
     height: 400px;
     border-radius: 12px;
@@ -112,13 +109,11 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
   
   .thumbnailContainer {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 0.8rem;
     gap: 10px;
+    margin-left: 0.5rem;
   }
 
   .thumbnailDiv {
-    position: relative;
     width: 86px;
     height: 84px;
     margin: 10px;
@@ -131,7 +126,6 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
   }
 
   .thumbnail { 
-    position: absolute;
     width: 86px;
     height: 84px;
     border-radius: 12px;
@@ -429,7 +423,6 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
 
 .thumbnailContainerModal {
   display: flex;
-  justify-content: flex-start;
   margin-left: 0.8rem;
   gap: 10px;
   margin-top: 20px;
