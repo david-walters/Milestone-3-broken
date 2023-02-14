@@ -4,7 +4,7 @@ This is a website that I created which is my third assignment on the Front-End W
 
 > Your challenge is to build out this e-commerce product page and get it looking as close to the design as possible.
 
-> You can use any tools you like to help you complete the challenge. So, if you've got something you'd like to practice, feel free and give a go.
+> You can use any tools you like to help you complete the challenge. So, if you've got something you'd like to practice, feel free and give it a go.
 
 > Your users should be able to:
 
@@ -19,9 +19,9 @@ This is a website that I created which is my third assignment on the Front-End W
 
 ## Initialising The Project
 
-Having recieved experience in JS from the previous project, I thought to complete this challenge by using a JS framework. I often seen requirements for React.js in job applications. So, I thought React would be ideal to practice.
+Having recieved experience in JS from the previous project, I thought to complete this challenge by using a JS framework. I often seen requirements for React.js in job applications. So, I thought React would be ideal to utilise for this project.
 
-Before initialising this project, I watched Youtube tutorials on React and created two other apps which implimented the fundamentals. Once I gained enough knowledge and experience, I then began by creating a repository in GitHub to kickstart the development.
+Before initialising this project, I watched Youtube tutorials on React and created two other apps which implimented the fundamentals of React. Once I gained enough knowledge and experience, I then began by creating a repository in GitHub to kickstart the development.
 
 There was the option of using a CSS framework such as Bootstrap, but I decided to do this all from my own CSS to get more expreience with responsive design.
 
@@ -72,11 +72,11 @@ Here are the design images that I had to replicate:
 
 ### Header
 
-The Header component consists of the logo image at the start of the navbar with 5 list items to the right of it (Collections, Men, Women, About, Contact), and a cart icon and an avatar to for far right of the navbar.
+I started off with the Header component, whist consists of the logo image at the start of the navbar with 5 list items to the right of it (Collections, Men, Women, About, Contact), and a cart icon and an avatar to the far right.
 
-The whole entire header has a grey border-line-bottom which is 2.8rem away from the list items. Each list item has a hover effect of going black from grey and an orange border-line-bottom. The orange border line has ben made to appear on the grey border line of the header with the use of padding.
+The whole entire header has a grey border-line-bottom which is 2.8rem away from the list items. Each list item has a hover effect of going black from grey and an orange border-line-bottom. The orange border line has been made to appear on the grey border line of the header with the use of padding.
 
-The cart icon has a hover effect to go black due to having a filter brightness property. The Cart component attached to it will then be displayed with a fixed position underneath it. A hidden span tag that is only revealed when the itemTotal (number of items in the cart) is anything above 0 has been put on the cart. The code to reveal that itemTotal span is as follows:
+The cart icon has a hover effect to go black due to having a filter brightness property. The Cart component that I created shortly after will then be displayed with a fixed position underneath it as a hover effect of the cart icon also. A hidden span tag that is only revealed when the itemTotal (number of items in the cart) is anything above 0. The code to reveal that itemTotal span is as follows:
 
 ```
 {itemTotal > 0 && <span className={styles.itemCount}>{itemTotal}</span>}
@@ -87,11 +87,12 @@ The avatar image was originally square but I made it into a circle with border r
 
 ### Product Image
 
-The ProductImage component is half of the main content. Being provided with 4 images of the product, I had to have a large image as the main image and I had to have all the images displayed underneath as thumbnail images. I was required to make a function that would set the main image to be whatever thumbnail image was selected. I did that with the following code:
+The ProductImage component is half of the main content. Being provided with 4 images of the product, I had to have a large image as the main image and I had to have all the images displayed underneath it as thumbnail images. I was required to make a function that would set the main image to be whatever thumbnail image was selected. I did that with the following code:
 
 ```
 {shoes.map((image) => (
-        <div className={`${styles.thumbnailDiv} ${currentImage === image ? `${styles.selectedDiv}` : ""}`} key={shortid.generate()}>
+        <div className={`${styles.thumbnailDiv} ${currentImage === image ? `${styles.selectedDiv}` : ""}`}
+        key={shortid.generate()}>
           <img
             src={image}
             alt="Thumbnail"
@@ -101,15 +102,15 @@ The ProductImage component is half of the main content. Being provided with 4 im
              ))}
 ```
 
-All 4 images are in an array called shoes. Using the map method, I iterated over the array and produced each image as a thumbnail image with a function that would set that image as the main image when clicked. I also added the code that if the main image matches the thumbnail image then I will have certain CSS styles that will decrease its opacity revealing the white div behind it and that div will have an orange border applied with the box shadow property. Using the border property affected the surrounding element's positioning whereas the box shadow property has absolute behaviour and presents as a border without affecting other elements.
+All 4 images are in an array called shoes. Using the map method, I iterated over the array and produced each image as a thumbnail image with an onClick function that would set that image as the main image. I also added a code that if the main image matches the thumbnail image then certain CSS styles will be applied to it. Those styles will decrease its opacity revealing the white div behind it and that div will have an orange border applied with the box shadow property. Using the border property affected the surrounding elements' positioning whereas the box shadow property has absolute behaviour and presents itself as a border without affecting other elements.
 
 I was given thumbnail images of the larger images for the challenge but using the above method produced the exact same result without having to add extra images and more code.
 
 ### Product Info and Buttons
 
-The ProductInfo component contains the company name with the product information and the price of the product. Underneath that, there's a plus and minus button to add a specified amount of the product which the user can then add to the shopping cart, and the add to cart button is placed right next to it.
+The ProductInfo component contains the company name with the product information and the price of the product. Underneath that, there's a plus and minus button to add a specified amount of the product which the user can then add to the shopping cart with a button, and that add-to-cart button is placed right next to it.
 
-The add to cart button takes the value of the item counter specified by the user and applies that to other variables which calculate the item total and total price. All the calculations will be displayed in the Cart component as a dropdown box which is revealed when the shopping cart is hovered over by the user. The total of items is added to the itemTotal variable which reveals the hidden span tag I mentioned earlier — giving the user a clear indication that the items have been added.
+The add to cart button takes the value of the item counter specified by the user and applies that to the variable itemTotal which then gets calculated for the total price. All the calculations will be displayed in the Cart component as a dropdown box which is revealed when the shopping cart is hovered over by the user. Due to the itemTotal variable having a value above 0, it will reveal the hidden span tag I mentioned earlier — giving the user a clear indication that the items have been added.
 
 This component was imported into the ProductImage component as it is the other half of the main content. I was able to get them side by side with the following code:
 
@@ -183,9 +184,9 @@ setCurrentImage(shoes[nextIndex]);
 };
 ```
 
-This enables the code to have the current index at 0 and go to the opposite end of the array when the previous icon is clicked — and vice versa.
+This enables the code to have the current index of the images array at 0 and go to the opposite end of the array when the previous icon is clicked — and vice versa.
 
-This Modal component is only revealed when the showModal variable is set to true. This is done with an onClick function placed on the main image in the ProductImage component. Because the Modal component requires to be shown above all the elements on the page, but it is being rendered through ProductImage component, I was required to use Portal. This enabled me to have my component work in another component but it will also get rendered outside the root div in the index.html file with a div I made underneath it with the ID of portal. Then using the Zindex I was able to have the Modal appear over evrything and blacken out the background.
+This Modal component is only revealed when the showModal variable is set to true. This is done with an onClick function placed on the main image in the ProductImage component. Because the Modal component needs to be shown above all the elements on the page, it is almost impossible to do as the component is being rendered as part of another component. So, I was required to use Portal. Portal still enabled me to have my component work in another component but it will also render the component outside the root div located in the index.html file. This is acheived with a div I made underneath the root div with the ID of portal. Then I was able to have the Modal appear over evrything and blacken out the background.
 
 Setting showModal to false in order to hide the component was done by an onClick function applied to the close icon. I also applied the same function to the div which blackens out the background for a better user experience.
 
@@ -193,9 +194,9 @@ Setting showModal to false in order to hide the component was done by an onClick
 
 The MobileView component is basically a summerised version of the whole app simply placed in one component. The whole component is inside a div with `className={styles.reveal}`, which gets activated when the screen width size is 768px or less. It hides what is not required for mobile view and adds or keeps what is required. It has tailored CSS for the purpose of mobile experience. It has been imported in the App.js file so that I can pass all the required props. The only component I imported into the MobileView component is the Cart component
 
-One of the newly added added features to the MobileView component is the button which reveals the nav elements as a sidebar. This saves the space for the header to neatly contain the logo, cart icon and avatar image.
+One of the newly added features to the MobileView component is the button which reveals the nav elements as a sidebar. This saves the space for the header to neatly contain the logo, cart icon and avatar image.
 
-The code I used to reveal the sidebar is as follows:
+The code I used to reveal the Nav sidebar is as follows:
 
 ```
   {showNav && (
@@ -221,7 +222,7 @@ The code I used to reveal the sidebar is as follows:
 
 ### SVGs
 
-All the SVGs I used in this app, I made them into separate components and imported them to where they were needed. As you can see in the snippet of code I used in the MobileView component, I have imported the CloseIcon component. This is no less than the SVG code. This kept the code clean and legible. The closeIcon was used to set the showNav variable to false, thus closing the nav sidebar.
+All the SVGs I used in this app, I made them into separate components and imported them to where they were needed. As you can see in the snippet of code I used in the MobileView component, I have imported the closeIcon component. This is no less than the SVG code. This kept the code clean and legible. The closeIcon was used to set the showNav variable to false, thus closing the nav sidebar. The function to set the showNav to false is also applied to the overlay div in the background.
 
 <br>
 
@@ -229,7 +230,7 @@ All the SVGs I used in this app, I made them into separate components and import
 
 ### Issue 1
 
-The biggest issue I had when making this app, trying to replicate the design images, was seeing how the selected thumbnail image was made to have a decreased opacity whilst also having an orange border. I used the opacity property with a box shadow applied but the opacity of the box shadow was also being affected. I tried all sorts of code such as filter brightness, transforming the hue, or even testing out colour blend properties — all of which was done in vain. It wasn't until I started doing the modal component that I realised that the opacity is revealing a white background and not revealing the elements underneath it. So I thought I must also add a div to contain the image and make the div the exact same size as the image and give it a white background with an orange box shodow when selected — and BAM! — It worked!
+The biggest issue I had when making this app, trying to replicate the design images, was seeing how the selected thumbnail image was made to have a decreased opacity whilst also having an orange border. I used the opacity property on the image with a box shadow property, but the opacity of the box shadow was also being affected. I tried all sorts of code such as filter brightness, transforming the hue, or even testing out colour blend properties — all of which were done in vain. It wasn't until I started doing the modal component that I realised that the opacity is revealing a white background and not revealing the elements behind it. So I had the idea I to add a div to contain the image and make the div the exact same size as the image and give it a white background with an orange box shadow applied to it when it is selected — and BAM! — It worked!
 
 ### Issue 2
 
@@ -237,7 +238,7 @@ I used my mobile phone to see the website and dicovered that there were some bug
 
 ### Issue 3
 
-As I was building my components, I realised there were some props I needed and I had no way to access them as the component branches were not connected. I tried finding a way to use the props but all were illogical and thus didn't work. I thought that the only way I can do it is to move my useState variables to the App.js file where I can then pass them all through as props to the relevent components.
+As I was building my components, I realised there were some props I needed and I had no way to access them as the component branches were not connected. I tried finding a way to use the props but all the ways were illogical and thus didn't work. I thought that the only way I can do it is to move my useState variables to the App.js file where I can then pass them all through as props to the relevent components.
 
 <br>
 
@@ -288,8 +289,10 @@ The hosting platform that I've used for my project is GitHub Pages. To deploy my
    and `"deploy": "gh-pages -d build",`
 10. Created and deployed the app into the gh-pages branch using the `npm run deploy` command.
 11. Went into 'Settings' on my repository page in GitHub.
-12. Selected the 'gh-pages branch' option under the 'GitHub Pages' section.
+12. Selected the 'gh-pages' branch option under the 'GitHub Pages' section.
 13. Opened the provided link to my website in a new tab.
+
+Here are the links to the final outcome of the website and to my repository.
 
 ### Live Website Link
 
