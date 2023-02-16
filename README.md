@@ -1,3 +1,8 @@
+## NOTE:
+
+The updated live version to view the website is on the other repository called Milestone-3-fixed-. It was a quick solution to a bug that I encountered until this is fixed.
+The link is at the bottom of this README file.
+
 # Product Page Challenge - Milestone Project 3
 
 This is a website that I created which is my third assignment on the Front-End Web Development course with The Learning People. The tasks of my assignment were the following;
@@ -296,8 +301,8 @@ Here are the links to the final outcome of the website and to my repository.
 
 ### Live Website Link
 
-**https://david-walters.github.io/Milestone-3/**
+**https://david-walters.github.io/Milestone-3-fixed-/**
 
 ### Repository Link
 
-**https://github.com/david-walters/Milestone-3.git**
+**https://github.com/david-walters/Milestone-3-fixed-.git**
