@@ -578,14 +578,15 @@ body {
 
 .avatar {
   position: relative;
-  margin-left: 10px;
+  margin-left: 15px;
   scale: 0.6;
 }
 
 .cartContainer {
   height: 250px;
   width: 95%;
-  margin-top: 21rem;
+  margin-top: 0rem;
+  top: 12%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -807,6 +808,10 @@ border-bottom: 4px solid hsl(26, 100%, 55%)
 .cartItem p:first-of-type {
   position: absolute;
   top: 0%;
+}
+
+.avatar {
+  margin-left: 8px;
 }
 
 .bin {
