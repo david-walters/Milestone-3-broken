@@ -52,30 +52,30 @@ const MobileView = ({count, setCount, itemTotal, setItemTotal, currentImage, set
   return (
     <div className={styles.reveal}>
                     <div className={styles.mobileHeader}>
-                          <div>
+
+                          <div className={styles.flex}>
                             <div className={styles.menuIcon} onClick={(handleShowNav)}><MenuIcon/></div>
                             <img className={styles.logo} src={logo} alt="Logo"/>
                           </div>
                     
-
                         <div className={styles.icons}>
                                 <div className={styles.cartIcon}>
                                   <img className={styles.icon1} src={cart_icon} alt="Shopping Cart"/>
                                   {itemTotal > 0 && <span className={styles.itemCount}>{itemTotal}</span>}
                                 </div>
-                            <div className={styles.cartContainer}>
-                                  <div className={styles.cartTitle}>Cart
-                                  </div>
-                                    <div className={styles.cartContent}>
-                                    <Cart count={count}
-                                        setCount={setCount}
-                                        itemTotal={itemTotal}
-                                        setItemTotal={setItemTotal}/>
+                                    <div className={styles.cartContainer}>
+                                          <div className={styles.cartTitle}>Cart
+                                          </div>
+                                            <div className={styles.cartContent}>
+                                            <Cart count={count}
+                                                setCount={setCount}
+                                                itemTotal={itemTotal}
+                                                setItemTotal={setItemTotal}/>
+                                            </div>
                                     </div>
-                            </div>
-                                <a href="#">
+                                <div href="#">
                                     <img src={avatar} className={styles.avatar} alt="Avatar"/>
-                                </a>
+                                </div>
                         </div>
                     </div>
 
