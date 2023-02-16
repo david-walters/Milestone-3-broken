@@ -301,7 +301,7 @@ Here are the links to the final outcome of the website and to my repository.
 
 ### Live Website Link
 
-**https://david-walters.github.io/Milestone-3-fxed-/**
+**https://david-walters.github.io/Milestone-3-fixed-/**
 
 ### Repository Link
 
